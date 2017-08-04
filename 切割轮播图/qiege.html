@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>切割轮播图</title>
+	<link rel="stylesheet" href="base.css">
+</head>
+<body>
+	<div class="box">
+		<div class="main">
+			<ul>
+				<li>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</li>
+				<li>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</li>
+				<li>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</li>
+				<li>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</li>
+				<li>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</li>
+			</ul>
+		</div>
+		<div class="btn">
+			<a href="javascript:void(0)" id="prev">&lt;</a>
+			<a href="javascript:void(0)" id="next">&gt;</a>
+		</div>
+	</div>
+	<script>
+		var prev = document.getElementById("prev");
+		var next = document.getElementById("next");
+		var lis = document.getElementsByTagName("li");
+		var count = 0;
+
+		prev.onclick = function(){
+			count++;
+			for(var i=0, len=lis.length; i<len; i++){
+				lis[i].style.transform = "rotateX("+ count*90 +"deg)";
+			}
+		};
+		next.onclick = function(){
+			count--;
+			for(var i=0, len=lis.length; i<len; i++){
+				lis[i].style.transform = "rotateX("+ count*90 +"deg)";
+			}
+		};
+	</script>
+</body>
+</html>
