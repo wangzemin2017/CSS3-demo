@@ -1,0 +1,133 @@
+/*主要样式*/
+body{
+	margin: 0;
+	padding: 0;
+}
+.section{
+	position: relative;
+	overflow: hidden;
+}
+
+/*第一页*/
+.first{
+	padding-top: 80px;
+}
+.first .logo{
+	width: 251px;
+	height: 186px;
+	margin: 0 auto;
+	background-image: url(../images/logo.png);
+}
+.first .text{
+	text-align: center;
+	line-height: 1;
+	margin: 85px 0 45px;
+}
+.first img{
+	margin: 0 24px;
+	opacity: 0;
+}
+.first .slogan{
+	height: 49px;
+	background: url(../images/info_1.png) center center no-repeat;
+}
+
+/*第一页动画*/
+.first.current img{
+	margin: 0;
+	opacity: 1;
+	transition: all 1s ease-in-out 0.5s;
+}
+
+/*第二页*/
+.second{
+	padding: 0 100px;
+}
+.second > div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.second .shield{
+	width: 428px;
+	height: 498px;
+}
+.second img{
+	float: left;
+	display: block;
+}
+.second img:nth-child(1){
+	transform: translate(100px, 50px) rotate(30deg);
+}
+.second img:nth-child(2){
+	transform: translate(200px, 80px) rotate(60deg);
+}
+.second img:nth-child(3){
+	transform: translate(300px, 90px) rotate(90deg);
+}
+.second img:nth-child(4){
+	transform: translate(350px, 300px) rotate(30deg);
+}
+.second img:nth-child(5){
+	transform: translate(400px, 400px) rotate(60deg);
+}
+.second img:nth-child(6){
+	transform: translate(450px, 200px) rotate(90deg);
+}
+.second img:nth-child(7){
+	transform: translate(500px, 150px) rotate(30deg);
+}
+.second img:nth-child(8){
+	transform: translate(550px, 200px) rotate(60deg);
+}
+.second img:nth-child(9){
+	transform: translate(600px, 500px) rotate(90deg);
+}
+.second .info{
+	width: 635px;
+	height: 309px;
+	background: url(../images/info_2.png);
+}
+
+/*第二页动画*/
+.second.current img{
+	transform: translate(0, 0) rotate(0);
+	transition: all 1s ease-in-out;
+}
+
+/*第三页*/
+.third{
+	padding: 0 60px;
+}
+.third > div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.third .info{
+	width: 631px;
+	height: 278px;
+	background: url(../images/info_3.png);
+}
+
+.third .circle{
+	width: 453px;
+	height: 449px;
+	background: url(../images/circle.png);
+}
+
+.third .rocket{
+	width: 204px;
+	height: 204px;
+	background: url(../images/rocket.png);
+	position: absolute;
+	right: 180px;
+	bottom: 200px;
+	transform: translate(-500px, 500px);
+}
+
+/*第三页动画*/
+.third.current .rocket{
+	transform: translate(0, 0);
+	transition: all 1s ease-in-out;
+}
