@@ -131,3 +131,195 @@ body{
 	transform: translate(0, 0);
 	transition: all 1s ease-in-out;
 }
+
+/*第四页*/
+.fourth{
+	padding: 0 80px;
+}
+.fourth > div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+}
+.fourth .search{
+	width: 529px;
+	height: 340px;
+	position: relative;
+}
+.fourth .input{
+	width: 529px;
+	height: 66px;
+	background: url('../images/search.png') no-repeat;
+	transform: translateX(-100%);
+}
+.fourth .key{
+	/*width: 99px;*/
+	width: 0;
+	height: 22px;
+	background: url(../images/key.png) no-repeat;
+	position: absolute;
+	left: 20px;
+	top: 22px;
+}
+.fourth .box{
+	width: 529px;
+	height: 372px;
+	position: absolute;
+	top: 54px;
+	overflow: hidden;	
+}
+.fourth .result{
+	width: 100%;
+	height: 100%;
+	background: url('../images/result.png') no-repeat;
+	transform: translateY(-100%);
+
+}
+.fourth .info{
+	width: 612px;
+	height: 299px;
+	background: url('../images/info_4.png') no-repeat;
+}
+
+/*第四页动画*/
+.fourth.current .input{
+	transition: all 1s ease-in-out;
+	transform: translateX(0);
+}
+.fourth.current .key{
+	animation: search 1.5s steps(5) 1.5s forwards;
+}
+.fourth.current .result{
+	transition: all 1s ease-in-out 3s;
+	transform: translateY(0);
+}
+
+@keyframes search{
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 99px;
+	}
+}
+
+/*第五页*/
+.fifth > div{
+	display: flex;
+	flex-direction: column;
+}
+.fifth .info{
+	height: 134px;
+	background: url(../images/info_5.png) center center no-repeat;
+	margin: 30px 0;
+}
+.fifth .browser{
+	width: 1004px;
+	height: 443px;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: 0 auto;
+	flex: 1;
+	position: relative;
+}
+.fifth .toolbar{
+	height: 79px;
+	background: url(../images/toolbar.png) no-repeat;
+	opacity: 0;
+}
+.line{
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.5);
+	opacity: 0;
+}
+.topline{
+	top: 0;
+	width: 100%;
+	height: 1px;
+	transform: translateX(100%);
+}
+.rightline{
+	right: 0;
+	width: 1px;
+	height: 100%;
+	transform: translateY(100%);
+}
+.bottomline{
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	transform: translateX(-100%);
+}
+.leftline{
+	left: 0;
+	width: 1px;
+	height: 100%;
+	transform: translateY(-100%);
+}
+.searchbar{
+	/*width: 925px;*/
+	width: 0;
+	height: 26px;
+	position: absolute;
+	left: 70px;
+	top: 31px;
+	overflow: hidden;
+}
+.searchbar span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+.extraline{
+	width: 100%;
+	height: 1px;
+	bottom: 30px;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.fifth .extra{
+	width: 394px;
+	height: 29px;
+	background: url(../images/extra.png) no-repeat;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+}
+
+/*第五页动画*/
+.fifth.current .leftline{
+	transition: all 1s ease-in-out;
+	transform: translateY(0);
+	opacity: 1;
+}
+.fifth.current .bottomline{
+	transition: all 1s ease-in-out;
+	transform: translateX(0);
+	opacity: 1;
+}
+.fifth.current .rightline{
+	transition: all 1s ease-in-out;
+	transform: translateY(0);
+	opacity: 1;
+}
+.fifth.current .topline{
+	transition: all 1s ease-in-out;
+	transform: translateX(0);
+	opacity: 1;
+}
+.fifth.current .searchbar{
+	transition: all 1s ease-in-out 1.5s;
+	width: 925px;
+}
+.fifth.current .toolbar{
+	transition: all 1s ease-in-out 1.5s;
+	opacity: 1;
+}
+.fifth.current .extra{
+	transition: all 1s linear 1.5s;
+	opacity: 1;
+}
